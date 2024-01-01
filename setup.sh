@@ -168,14 +168,14 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan Username
 izinsc="https://raw.githubusercontent.com/gemilangkinasih/permission/main/ipvps"
 rm -f /usr/bin/user
-username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
+username=$(curl $izinsc | grep $MYIP | awk '{print $1}')
 echo "$username" >/usr/bin/user
-exp=$(curl $izinsc | grep $MYIP | awk '{print $3}')
+exp=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$exp" >/usr/bin/e
 
 # Usename & Expired
-username=$(cat /usr/bin/user)
-exp=$(cat /usr/bin/e)
+Name=$(cat /usr/bin/user)
+Exp=$(cat /usr/bin/e)
 
 domain=$(cat /root/domain)
 CITY=$(curl -s ipinfo.io/city )
@@ -192,14 +192,14 @@ KEY="6854390843:AAHnygrqUOSq-5spVPBBrOvBMy4xcdUBPBU"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 TEXT="Installasi Script v6.0 By GemilangKinasih
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 <code>Domain     :</code> <code>$domain</code>
 <code>IP Vps     :</code> <code>$MYIP</code>
 <code>User Script:</code> <code>$Name</code>
 <code>Exp Script :</code> <code>$Exp</code>
 <code>Location   :</code> <code>$CITY</code>
 <code>Timezone   :</code> <code>$WKT</code>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 "
 curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
