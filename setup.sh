@@ -168,9 +168,9 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 # Perizinan Sc & Pemanggilan Username
 izinsc="https://raw.githubusercontent.com/gemilangkinasih/permission/main/ipvps"
 rm -f /usr/bin/user
-username=$(curl $izinsc | grep $MYIP | awk '{print $1}')
+username=$(curl $izinsc | grep $MYIP | awk '{print $2}')
 echo "$username" >/usr/bin/user
-exp=$(curl $izinsc | grep $MYIP | awk '{print $2}')
+exp=$(curl $izinsc | grep $MYIP | awk '{print $3}')
 echo "$exp" >/usr/bin/e
 
 # Usename & Expired
