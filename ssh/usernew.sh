@@ -20,7 +20,7 @@ else
 domeni=`cat /etc/v2ray/domain`
 fi
 domen=`cat /etc/xray/domain`
-sldomain=`cat /etc/xray/dns`
+# sldomain=`cat /etc/xray/dns`
 slkey=`cat /etc/slowdns/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
