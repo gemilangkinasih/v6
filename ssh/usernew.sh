@@ -20,7 +20,7 @@ else
 domeni=`cat /etc/v2ray/domain`
 fi
 domen=`cat /etc/xray/domain`
-# sldomain=`cat /etc/xray/dns`
+sldomain=`cat /etc/xray/nsdomain`
 slkey=`cat /etc/slowdns/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
@@ -125,7 +125,7 @@ echo -e "
 GET / HTTP/1.1[crlf]Host: $domen[crlf]Upgrade: websocket[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m  SCRIPT PREMIUM BY GEMILANG-KINASIH   \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[40;1;37m SCRIPT PREMIUM BY GEMILANG-KINASIH \E[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
