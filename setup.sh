@@ -191,17 +191,23 @@ CHATID="6348824977"
 KEY="6854390843:AAHnygrqUOSq-5spVPBBrOvBMy4xcdUBPBU"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
-TEXT="Installasi Script v6.0 By GemilangKinasih
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-<code>Domain     :</code> <code>$domain</code>
-<code>IP Vps     :</code> <code>$MYIP</code>
-<code>User Script:</code> <code>$Name</code>
-<code>Exp Script :</code> <code>$Exp</code>
-<code>Location   :</code> <code>$CITY</code>
-<code>Timezone   :</code> <code>$WKT</code>
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-"
-curl -s --max-time $TIME -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+TEXT="
+<code>──────────────────────────</code>
+🧿Instalasi Special Autoscript V2.4🧿
+<code>──────────────────────────</code>
+<code>Domain   :</code> <code>$domain</code>
+<code>IP Vps   :</code> <code>$MYIP</code>
+<code>Username :</code> <code>$Name</code>
+<code>Expired  :</code> <code>$Exp</code>
+<code>Location :</code> <code>$CITY</code>
+<code>Timezone :</code> <code>$WKT</code>
+<code>──────────────────────────</code>
+🧿Created By Gemilang Kinasih 2024🧿
+<code>──────────────────────────</code>
+Notifications Automatic From Github
+"'&reply_markup={"inline_keyboard":[[{"text":"ORDER SCRIPT","url":"https://t.me/gemilangkinasih"}]]}'
+
+curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install SSH / WS               $NC"
@@ -266,36 +272,34 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ RIDWANZ VPN ]-===================="
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo ""
+echo "===================-[ GEMILANG-KINASIH ]-===================" | tee -a log-install.txt
+echo "------------------------------------------------------------" | tee -a log-install.txt
+echo "" | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
-echo "   - OpenVPN		: 2086"  | tee -a log-install.txt
-echo "   - OpenSSH		: 22"  | tee -a log-install.txt
-echo "   - SSH Websocket	: 80,8080 [ON]" | tee -a log-install.txt
-echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
-echo "   - Stunnel4		: 8880, 8443" | tee -a log-install.txt
-echo "   - Dropbear		: 109, 143" | tee -a log-install.txt
-echo "   - Badvpn		: 7100-7900" | tee -a log-install.txt
-echo "   - Nginx		: 81" | tee -a log-install.txt
-echo "   - Vmess TLS		: 443" | tee -a log-install.txt
-echo "   - Vmess None TLS	: 80,8080" | tee -a log-install.txt
-echo "   - Vless TLS		: 443" | tee -a log-install.txt
-echo "   - Vless None TLS	: 80,8080" | tee -a log-install.txt
-echo "   - Trojan GRPC		: 443" | tee -a log-install.txt
-echo "   - Trojan WS		: 443" | tee -a log-install.txt
-echo "   - Trojan Go		: 443" | tee -a log-install.txt
+echo "   - OpenVPN              : 2086"  | tee -a log-install.txt
+echo "   - OpenSSH              : 22"  | tee -a log-install.txt
+echo "   - SSH Websocket        : 80,8080 [ON]" | tee -a log-install.txt
+echo "   - SSH SSL Websocket    : 443" | tee -a log-install.txt
+echo "   - Stunnel4             : 8880, 8443" | tee -a log-install.txt
+echo "   - Dropbear             : 109, 143" | tee -a log-install.txt
+echo "   - Badvpn               : 7100-7900" | tee -a log-install.txt
+echo "   - Nginx                : 81" | tee -a log-install.txt
+echo "   - Vmess TLS            : 443" | tee -a log-install.txt
+echo "   - Vmess None TLS       : 80,8080" | tee -a log-install.txt
+echo "   - Vless TLS            : 443" | tee -a log-install.txt
+echo "   - Vless None TLS       : 80,8080" | tee -a log-install.txt
+echo "   - Trojan GRPC          : 443" | tee -a log-install.txt
+echo "   - Trojan WS            : 443" | tee -a log-install.txt
+echo "   - Trojan Go            : 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
-echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
-echo "   - Dflate		: [ON]"  | tee -a log-install.txt
-echo "   - IPtables		: [ON]"  | tee -a log-install.txt
-echo "   - Auto-Reboot		: [ON]"  | tee -a log-install.txt
-echo "   - IPv6			: [OFF]"  | tee -a log-install.txt
-echo "   - Autoreboot On	: $aureb:00 $gg GMT +7" | tee -a log-install.txt
+echo "   - Timezone             : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Fail2Ban             : [ON]"  | tee -a log-install.txt
+echo "   - Dflate               : [ON]"  | tee -a log-install.txt
+echo "   - IPtables             : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot          : [ON]"  | tee -a log-install.txt
+echo "   - IPv6                 : [OFF]"  | tee -a log-install.txt
+echo "   - Autoreboot On        : $aureb:00 $gg GMT +7" | tee -a log-install.txt
 echo "   - AutoKill Multi Login User" | tee -a log-install.txt
 echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Fully automatic script" | tee -a log-install.txt
@@ -303,19 +307,14 @@ echo "   - VPS settings" | tee -a log-install.txt
 echo "   - Admin Control" | tee -a log-install.txt
 echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
-echo ""
-echo ""
-echo "------------------------------------------------------------"
-echo ""
-echo "===============-[ Script by GemilangKinasih ]-==============="
-echo -e ""
-echo ""
 echo "" | tee -a log-install.txt
+echo "------------------------------------------------------------" | tee -a log-install.txt
+echo "===============-[ Script By Gemilangkinasih ]-==============" | tee -a log-install.txt
+echo ""
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo -e "
-"
+echo -e ""
 read -n 1 -s -r -p "Press any key to menu"
 menu
